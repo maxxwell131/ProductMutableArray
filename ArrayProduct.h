@@ -14,6 +14,7 @@
 @property NSArray<Product*> *arrayProduct;
 
 -(instancetype)initWithProducts;
+-(void) showArray;
 -(NSString *)description;
 
 @end

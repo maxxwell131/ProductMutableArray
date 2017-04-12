@@ -12,8 +12,7 @@
 
 @synthesize arrayProduct;
 
-- (instancetype)initWithProducts
-{
+- (instancetype)initWithProducts {
     NSArray *Prods = [NSArray arrayWithObjects:
                       [[Product alloc] initWithName:@"Snikers" price:12.5 weight:45],
                       [[Product alloc] initWithName:@"Mars" price:14.7 weight:55],
@@ -27,26 +26,18 @@
     return self;
 }
 
-- (NSString *)description
-{
-    NSMutableString *tmp;
-    
+-(void) showArray {
+    NSLog(@"%@", self);
+}
+
+-(NSString *)description {
+    NSMutableString *tmp = [[NSMutableString alloc] initWithCapacity:20];
+    [tmp appendString:@"\n-------Product`s list--------\n"];
     for (Product *tmpProduct in self.arrayProduct) {
-        [tmp appendString:[NSString stringWithFormat:@"%@ /n", tmpProduct]];
+        [tmp appendString:[NSString stringWithFormat:@"%@ \n",  tmpProduct]];
     }
     
     return (NSString*)tmp;
-}
-
--(void)showArray
-{
-        NSMutableString *tmp;
-        
-        for (Product *tmpProduct in self.arrayProduct) {
-            [tmp appendString:[NSString stringWithFormat:@"%@ /n", tmpProduct]];
-        }
-        
-        NSLog(@"%@", (NSString*)tmp);
 }
 
 @end

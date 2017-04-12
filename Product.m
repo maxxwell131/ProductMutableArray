@@ -26,7 +26,7 @@
     return self;
 }
 
--(NSString *) description{
+-(NSString *) description {
     return [NSString stringWithFormat:@"Name: %@; Price = %g; Weight = %i", self->name, self->price, self->weight];
 }
 @end

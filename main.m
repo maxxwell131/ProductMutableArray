@@ -14,8 +14,9 @@ int main(int argc, const char * argv[]) {
         // insert code here...
         NSLog(@"Hello, World!");
         ArrayProduct *arrProducts = [[ArrayProduct alloc] initWithProducts];
-        NSLog(@"%@", arrProducts.arrayProduct);
+
         
+        [arrProducts showArray];
         
     }
     return 0;
