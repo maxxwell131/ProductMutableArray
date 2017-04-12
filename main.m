@@ -7,17 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ArrayProduct.h"
+#import "Aplication.h"
+
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
         NSLog(@"Hello, World!");
-        ArrayProduct *arrProducts = [[ArrayProduct alloc] initWithProducts];
-
-        
-        [arrProducts showArray];
-        
+        Aplication *aplication = [[Aplication alloc] init];
+        [aplication start];
     }
     return 0;
 }
