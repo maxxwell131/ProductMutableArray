@@ -27,45 +27,66 @@ enum NSUInteger
 -(void)start {
     
     ArrayProduct *arrProducts = [[ArrayProduct alloc] initWithProducts];
-    [self showMenu];
+    [Aplication menuController];
     [arrProducts showArray];
 }
 
 //------------menu----------
--(void)showMenu {
++(void)showMenu {
     NSString *const menuString = [NSString stringWithFormat:@"\n 1 - Add New Product In Array\n 2 - Remove Product By Index\n 3 - Show All Product\n 4 - Sort Product By name\n 5 - Sort Product By price\n 6 - Sort Product By wight\n 7 - Load Data\n 8 - Sava Data\n 0 - Exit\n"];
 
     NSLog(@"%@",menuString);
 }
 
--(NSUInteger)menuController {
++(void)menuController {
 //    NSNumber *menuSelect = [[NSNumber alloc] init];
     NSUInteger menuSelect;
     
     do {
         do {
+            [Aplication showMenu];
             menuSelect = [[Aplication menuItemSelect] integerValue];
-        } while (menuSelect < ExitMenu && menuSelect >SaveData);
+        } while (menuSelect > ExitMenu && menuSelect < SaveData);
         
         switch (menuSelect) {
             case ExitMenu:
-                return 0;
+                //return 0;
                 break;
             case AddNewProductInArray: {
+                NSLog(@"AddNewProductInArray");
                 break;
             }
             case RemoveProductByIndex: {
+                NSLog(@"RemoveProductByIndex");
                 break;
             }
             case ShowAllProduct: {
+                NSLog(@"ShowAllProduct");
                 break;
             }
-            default:
+            case SortProductByName: {
+                NSLog(@"SortProductByName");
                 break;
+            }
+            case SortProductByPrice: {
+                NSLog(@"SortProductByPrice");
+                break;
+            }
+            case SortProductByWight: {
+                NSLog(@"SortProductByWight");
+                break;
+            }
+            case LoadData: {
+                NSLog(@"LoadData");
+                break;
+            }
+            case SaveData: {
+                NSLog(@"SaveData");
+                break;
+            }
         }
 
     } while (menuSelect != ExitMenu);
-        return 0;
 }
 
 +(NSNumber*)menuItemSelect {

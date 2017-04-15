@@ -21,8 +21,6 @@ extern NSString *const menuString;
 +(NSNumber*)doubleInputProductPrice;
 +(NSNumber*)intInputProductWeight;
 
--(void)showMenu;
--(NSUInteger)menuController;
 +(NSNumber*)menuItemSelect;
 
 @end
