@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "ArrayProduct.h"
+#import "Product.h"
 
 extern NSString *const menuString;
 
 @interface Aplication : NSObject
-
 
 
 -(void)start;
@@ -22,6 +22,9 @@ extern NSString *const menuString;
 +(NSNumber*)intInputProductWeight;
 
 +(NSNumber*)menuItemSelect;
+
+//-(ArrayProduct*)addNewProduct;
+//-(ArrayProduct*)removeProductByIndex:(NSUInteger)index;
 
 @end
 

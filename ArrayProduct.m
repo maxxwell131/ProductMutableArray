@@ -40,4 +40,10 @@
     return (NSString*)tmp;
 }
 
+//-(id)copyWithZone:(NSZone *)zone {
+//    ArrayProduct *tmp = [[self class] allocWithZone:zone];
+//    
+//    return tmp;
+//}
+
 @end
